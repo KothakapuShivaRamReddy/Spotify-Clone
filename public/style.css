@@ -1,0 +1,75 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color:black;
+    color:#fff;
+    overflow: auto;
+    padding:0.5rem;
+
+}.explore-premium{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.premium-box{
+    background-color: #232323;
+    height:20rem;
+    border-radius:0.75rem;
+    margin:0.75rem 0 1.75rem 0;
+    padding:0.75rem 1rem;
+    width:50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+    
+}
+.pre-type{
+    font-size: 2rem;
+    margin-top: -1px;
+    font-weight:600 ;
+
+}
+.badge{
+    height: 3rem;
+    width:fit-content;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: teal;
+    border:none;
+    padding: 0 2rem;
+
+}
+.pre-amount{
+    font-size: 1.5rem;
+    margin-top: -1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+.line{
+    height: 150px;
+    padding-top: -3px;
+}
+ul{
+    padding-top: -3px;
+}
+li{
+    padding-top: 0.5rem;
+}
+.pre-terms{
+    margin-top: 5px;
+    margin-bottom: -2px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+    opacity:0.5;
+}
+.pre-terms:hover{
+   
+    
+    opacity:1;
+}
+ 
