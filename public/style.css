@@ -5,12 +5,20 @@ body{
     color:#fff;
     overflow: auto;
     padding:0.5rem;
+    
 
-}.explore-premium{
+}.plan{
+   /* margin-left: 41rem ; */
+   color:#c7bebe;
+   
+}
+.explore-premium{
     display:flex;
     justify-content: center;
+    
     flex-wrap: wrap;
     overflow: auto;
+    
 }
 
 .premium-box{

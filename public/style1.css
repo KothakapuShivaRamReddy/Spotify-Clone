@@ -128,6 +128,7 @@ a{
     justify-content:space-between;
     align-items: center;
     padding:0.5rem 0 0.75rem 0;
+    z-index: 1;
     
  }
  .sticky-nav-icons{
@@ -221,9 +222,19 @@ a{
   }
   .progress-bar{
     appearance: none;
+    width: 250px;
+    height:5px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem ;
+    border-radius: 1rem;
     
   }
   .progress-bar::-webkit-slider-runnable-track{
-
+    cursor: pointer;
+    height:1rem;
     width:200px;
+  }
+  .playback-bar::-webkit-slider-thumb{
+   
+   background: red;
   }

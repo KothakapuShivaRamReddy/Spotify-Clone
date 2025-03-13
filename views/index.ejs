@@ -61,7 +61,7 @@
                 </div>
                 <div class="sticky-nav-options">
                     <button class="badge nav-item help" onclick="hello()" >Explore Premium</button>
-                    <button class="badge nav-item install"><i class="fa-regular fa-circle-down"style="margin-right:0.5rem "></i>Install App</button>
+                    <button class="badge nav-item install" onclick="download()" style="cursor:pointer"><i class="fa-regular fa-circle-down"style="margin-right:0.5rem "></i>Install App</button>
                     <i class="fa-regular fa-user"></i>
                 </div>
             </div>
@@ -77,9 +77,9 @@
             <h2>Trending for you</h2>
             <div class="cards-container">
                 <div class="card">
-                    <img src="./project/card2img.jpeg " class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
+                    <img src="./project/card7img.png" class="card-img">
+                    <p class="card-title">Aashiqui 2</p>
+                    <p class="card-info">Mithoon , Arijit Singh</p>
                 </div>
                 <div class="card">
                     <img src="./project/card3img.jpeg " class="card-img">
@@ -92,7 +92,7 @@
                     <p class="card-info">Your daily updates of the most played...</p>
                 </div>
                 <div class="card">
-                    <img src="./project/card3img.jpeg " class="card-img">
+                    <img src="./project/card2img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
                 </div>
@@ -104,11 +104,11 @@
             </div>
             <h2>Shows to try</h2>
             <div class="cards-container">
-                <div class="card">
+                <a href="#"><div class="card" >
                     <img src="./project/card5img.jpeg " class="card-img">
                     <p class="card-title">Top Songs-Glo..</p>
                     <p class="card-info">Your weekly updates of the most played...</p>
-                </div>
+                </div></a>
                 <div class="card">
                     <img src="./project/card6img.jpeg " class="card-img">
                     <p class="card-title">Top Songs-India</p>
@@ -141,7 +141,7 @@
                 <div class="playback-bar">
                     <span class="start-time">00:00</span>
                     <input type="range" min="0" max="100" step="1" class="progress-bar">
-                    <span class="tot-time">1:43</span>
+                    <span class="tot-time"> 01:43</span>
                 </div>
             </div>
             <div class="controls"></div>
@@ -150,6 +150,9 @@
     <script>
        function hello() { window.location.href="premium.html";
 
+        }
+        function download(){
+            alert("You can't download app write now.");
         }
     </script>
 </body>
