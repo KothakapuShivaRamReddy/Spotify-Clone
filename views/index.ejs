@@ -76,13 +76,23 @@
             </div>
             <h2>Trending for you</h2>
             <div class="cards-container">
-                <div class="card">
+                <a href="#" class="card-anch"><div class="card">
                     <img src="./project/card7img.png" class="card-img">
                     <p class="card-title">Aashiqui 2</p>
                     <p class="card-info">Mithoon , Arijit Singh</p>
+                </div></a>
+                <div class="card">
+                    <img src="./project/card8img.png " class="card-img">
+                    <p class="card-title">Ride it</p>
+                    <p class="card-info">Your daily updates of the most played...</p>
                 </div>
                 <div class="card">
                     <img src="./project/card3img.jpeg " class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily updates of the most played...</p>
+                </div>
+                <div class="card">
+                    <img src="./project/card2img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
                 </div>
@@ -92,7 +102,7 @@
                     <p class="card-info">Your daily updates of the most played...</p>
                 </div>
                 <div class="card">
-                    <img src="./project/card2img.jpeg " class="card-img">
+                    <img src="./project/card4img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
                 </div>
@@ -144,14 +154,22 @@
                     <span class="tot-time"> 01:43</span>
                 </div>
             </div>
-            <div class="controls"></div>
+            <div class="controls">
+                    <i class="fa-solid fa-microphone control-item"></i>
+                    <i class="fa-solid fa-volume-high control-item"></i>
+                   <input type="range" min="0" max="100" step="1" class="volume-bar control-item">
+                    <i class="fa-solid fa-headphones control-item"></i>
+                
+            </div>
+            
         </div>
     </div>
     <script>
-       function hello() { window.location.href="premium.html";
+       function hello() { 
+        window.location.href="premium.html";
 
         }
-        function download(){
+        function download(){ 
             alert("You can't download app write now.");
         }
     </script>

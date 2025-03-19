@@ -137,6 +137,9 @@ a{
  .sticky-nav-icons img{
     height:1.25rem;
     width:1.5rem;
+    opacity:0.7;
+ }.sticky-nav-icons img:hover{
+   opacity:1;
  }
  .sticky-nav-options{
     margin-right :0.5rem;
@@ -158,12 +161,18 @@ a{
     }
  }
  .card{
-    background-color: #232323;
+    background-color: #121212;
     width: 150px;
+    height:270px;
     border-radius: 0.5rem;
     padding:1rem;
     margin-left: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 1rem;}
+ /* }.card:hover{
+   width: 160px;
+    height:280px;
+ } */.card:hover{
+   background-color: #232323;
  }
  .cards-container{
    
@@ -225,7 +234,7 @@ a{
     width: 250px;
     height:5px;
     margin-top: 0.5rem;
-    margin-left: 0.5rem ;
+    margin-left: 0.5rem;
     border-radius: 1rem;
     
   }
@@ -238,3 +247,21 @@ a{
    
    background: red;
   }
+  .card-anch{
+      cursor: default;
+  }
+  .controls{
+   background-color: #000;
+   display:flex;
+   align-items: center;
+   
+  }
+  .control-item{
+   margin-left:0.5rem;
+   opacity:0.6;
+  }
+  .control-item:hover{
+    opacity:1;
+  }
+
+  
