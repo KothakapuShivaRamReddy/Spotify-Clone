@@ -167,12 +167,19 @@ a{
     border-radius: 0.5rem;
     padding:1rem;
     margin-left: 1.2rem;
-    margin-top: 1rem;}
- /* }.card:hover{
+    margin-top: 1rem;
+    position: relative;
+    
+   }
+ /* card:hover{
    width: 160px;
     height:280px;
  } */.card:hover{
    background-color: #232323;
+   transform: scale(1.03); /* increase size */
+   .circle-button{
+      display:list-item;
+   }
  }
  .cards-container{
    
@@ -181,6 +188,7 @@ a{
  }.card-img{
     width:100%;
     border-radius: 0.5rem;
+    /* position: relative; */
  }
  .card-title{
     font-weight: 600;
@@ -264,4 +272,27 @@ a{
     opacity:1;
   }
 
+  #player{
+    position: absolute;
+    top:40%;
+    left:60%;
+   
+   
+   
+  }
+  .circle-button{
+     height: 60px;
+     width:60px;
+     border-radius: 50%;
+     border:none;
+     background-color: red;
+     color:black;
+     font-size: 30px;
+     cursor: pointer;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     transition: background-color 0.1s;
+     display:none;
+  }
+ 
+  
   
