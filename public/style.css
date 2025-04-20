@@ -33,7 +33,10 @@ body{
     flex-direction: column;
    
     
+}.premium-box:hover{
+    transform: scale(1.04);
 }
+
 .pre-type{
     font-size: 2rem;
     margin-top: -1px;

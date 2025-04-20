@@ -274,20 +274,20 @@ a{
 
   #player{
     position: absolute;
-    top:40%;
-    left:60%;
+    top:38%;
+    left:63%;
    
    
    
   }
   .circle-button{
-     height: 60px;
-     width:60px;
+     height: 50px;
+     width:50px;
      border-radius: 50%;
      border:none;
      background-color: red;
      color:black;
-     font-size: 30px;
+     font-size: 20px;
      cursor: pointer;
      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
      transition: background-color 0.1s;

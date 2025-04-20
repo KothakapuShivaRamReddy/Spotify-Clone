@@ -87,11 +87,11 @@
                     <img src="./project/card8img.png " class="card-img">
                     <p class="card-title">Ride it</p>
                     <p class="card-info">Your daily updates of the most played...</p>
-                    <audio id="audio" src="./project/Ride It.mp3"></audio>
+                    <audio id="audio" src="audio/Ride It.mp3" type="audio/mpeg"></audio>
                     <div id="player">
-                        <button id="playbtn" class="circle-button"> </button>
+                        <button id="playbtn" class="circle-button">▶</button>
                      </div>
-                </audio>
+                
                 
                 </div>
                 <div class="card">
@@ -104,21 +104,25 @@
                     <img src="./project/card2img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
+                    <%-include("includes/head.ejs")%>
                 </div>
                 <div class="card">
                     <img src="./project/card4img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
+                    <%-include("includes/head.ejs")%>
                 </div>
                 <div class="card">
                     <img src="./project/card4img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
+                    <%-include("includes/head.ejs")%>
                 </div>
                 <div class="card" >
                     <img src="./project/card4img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
+                    <%-include("includes/head.ejs")%>
                 </div>
             </div>
             <h2>Shows to try</h2>
@@ -181,7 +185,10 @@
             alert("You can't download app write now.");
         } 
         
+        
+        
+
     </script>
-    <script src="./project/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
