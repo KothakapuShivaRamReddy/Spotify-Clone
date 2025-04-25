@@ -77,40 +77,67 @@
             </div>
             <h2>Trending for you</h2>
             <div class="cards-container">
+                <div class="card">
+                    <img src="./project/card8img.png " class="card-img">
+                    <p class="card-title">Ride it</p>
+                    <p class="card-info">Your daily updates of the most played...</p>
+                    
+                    <audio id="audio" src="./audio/Ride It.mp3" type="./audio/mpeg"></audio>
+
+                    <div id="player">
+                         <button id="playbtn" class="circle-button">▶</button>
+                    </div>
+                
+                
+                </div>
                 <a href="#" class="card-anch"><div class="card">
                     <img src="./project/card7img.png" class="card-img">
                     <p class="card-title">Aashiqui 2</p>
                     <p class="card-info">Mithoon , Arijit Singh</p>
                     <%-include("includes/head.ejs")%>
                 </div></a>
-                <div class="card">
+                <!-- <div class="card">
                     <img src="./project/card8img.png " class="card-img">
                     <p class="card-title">Ride it</p>
                     <p class="card-info">Your daily updates of the most played...</p>
-                    <audio id="audio" src="audio/Ride It.mp3" type="audio/mpeg"></audio>
+                    
+                    <audio id="audio" src="./audio/Ride It.mp3" type="./audio/mpeg"></audio>
+
                     <div id="player">
-                        <button id="playbtn" class="circle-button">▶</button>
-                     </div>
+                         <button id="playbtn" class="circle-button">▶</button>
+                    </div>
                 
                 
-                </div>
+                </div> -->
                 <div class="card">
                     <img src="./project/card3img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
-                    <%-include("includes/head.ejs")%>
+                    <audio id="audio" src="./audio/Premalo.mp3" type="./audio/mpeg"></audio>
+
+                    <div id="player">
+                         <button id="playbtn" class="circle-button">▶</button>
+                    </div>
                 </div>
                 <div class="card">
                     <img src="./project/card2img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
-                    <%-include("includes/head.ejs")%>
+                    <audio id="audio" src="./audio/Naa Ready.mp3" type="./audio/mpeg"></audio>
+
+                    <div id="player">
+                         <button id="playbtn" class="circle-button">▶</button>
+                    </div>
                 </div>
                 <div class="card">
                     <img src="./project/card4img.jpeg " class="card-img">
                     <p class="card-title">Top 50 - Global</p>
                     <p class="card-info">Your daily updates of the most played...</p>
-                    <%-include("includes/head.ejs")%>
+                    <audio id="audio" src="./audio/Naa Ready.mp3" type="./audio/mpeg"></audio>
+
+                    <div id="player">
+                         <button id="playbtn" class="circle-button">▶</button>
+                    </div>
                 </div>
                 <div class="card">
                     <img src="./project/card4img.jpeg " class="card-img">
@@ -157,14 +184,14 @@
                 <div class="player-control">
                          <i class="fa-solid fa-shuffle player-control-item"></i>
                          <img src="./project/player_icon2.png" class="player-control-item">
-                         <img src="./project/player_icon3.png" class="player-control-item" style="height:1.3rem;opacity:1;">
+                         <img src="./project/player_icon3.png" class="player-control-item   songplay"  style="height:1.3rem;opacity:1;">
                          <img src="./project/player_icon4.png" class="player-control-item">
                          <img src="./project/player_icon5.png" class="player-control-item">                        
                 </div>
                 <div class="playback-bar">
                     <span class="start-time">00:00</span>
-                    <input type="range" min="0" max="100" step="1" class="progress-bar">
-                    <span class="tot-time"> 01:43</span>
+                    <input type="range" max="0" value="0" step="1" class="progress-bar">
+                    <span class="tot-time">1:42</span> 
                 </div>
             </div>
             <div class="controls">
