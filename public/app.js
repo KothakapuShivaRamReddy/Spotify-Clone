@@ -4,22 +4,9 @@
         const progress=document.querySelector(".progress-bar");
         const startTimeSpan = document.querySelector(".start-time");
         const totalTimeSpan = document.querySelector(".tot-time");
+        const prev=document.querySelector(".preplay");
+        const next=document.querySelector(".nextplay");
         let isplaying=false;
-    // btn.forEach((b,index)=>{ 
-    //     b.addEventListener("click", () => {
-    //         if(isplaying){
-    //             audio.forEach((a)=>{ a.pause();});
-    //             b.textContent = "▶";
-    //         }else{
-    //             audio.forEach((a)=>{ a.play();});
-    //              b.textContent = "⏸";
-    //         } isplaying=!isplaying;
-    //         // if (b.textContent === "▶") {
-    //         //     b.textContent = "⏸";
-    //         // } else {
-    //         //     b.textContent = "▶";
-    //         }); 
-    //     });
        
     buttons.forEach((btn, index) => {
         btn.addEventListener("click", () => {
@@ -38,22 +25,8 @@
                 currentAudio.play();
                 btn.textContent = "⏸";
                 player.src="./project/pause-button.png";
-                // currentAudio.addEventListener("loadedmetadata",()=>{
-                //     progress.max=Math.floor(currentAudio.duration);
-                //     totalTimeSpan.textContent = formatTime(currentAudio.duration);
-                // });
-                // currentAudio.addEventListener("timeupdate",()=>{
-                //     progress.value=Math.floor(currentAudio.currentTime);
-                //     startTimeSpan.textContent = formatTime(currentAudio.currentTime);
-                // });currentAudio.addEventListener("loadmetadata",()=>{
-                    currentAudio.addEventListener("loadedmetadata",()=>{
-                        progress.max=Math.floor(currentAudio.duration);
-                        totalTimeSpan.textContent = formatTime(currentAudio.duration);
-                    });
-                    currentAudio.addEventListener("timeupdate",()=>{
-                        progress.value=Math.floor(currentAudio.currentTime);
-                        startTimeSpan.textContent = formatTime(currentAudio.currentTime);
-                    });
+              
+               timing(currentAudio,progress,totalTimeSpan,startTimeSpan);
             } else {
                 currentAudio.pause();
                 btn.textContent = "▶";
@@ -68,9 +41,50 @@
             //     startTimeSpan.textContent = formatTime(currentAudio.currentTime);
             // });
             
+            
         });
     });
     
+    //     player.addEventListener("click",()=>{
+    //         audios.forEach((audio,i)=>{
+    //             const currentAudio = audios[i];
+    //          if(currentAudio.paused){    
+    //         if(i===currentplayindex){
+    //         const currentAudio = audios[currentplayindex];
+    //         currentAudio.play();
+    //         player.src="./project/pause-button.png";
+    //         timing(currentAudio,progress,totalTimeSpan,startTimeSpan);      
+    //         }else{
+    //             currentAudio.play();
+    //         player.src="./project/pause-button.png";
+    //         timing(currentAudio,progress,totalTimeSpan,startTimeSpan);
+
+    //         }}
+    //         else{
+    //             currentAudio.pause();
+    //             player.src="./project/player_icon3.png";
+
+    //         }
+    // });
+    // }
+    // );
+
+    
+    player.addEventListener("click",()=>{
+        const currentAudio = audios[currentplayindex];
+        if(currentAudio.paused){
+            
+             
+            currentAudio.play();
+            player.src="./project/pause-button.png";
+            timing(currentAudio,progress,totalTimeSpan,startTimeSpan);
+            
+        }
+        else{
+            currentAudio.pause();
+            player.src="./project/player_icon3.png";
+        }
+    });
     
 // module.exports=app;
 function formatTime(seconds) {
@@ -78,3 +92,45 @@ function formatTime(seconds) {
     const sec = Math.floor(seconds % 60);
     return `${min}:${sec < 10 ? '0' + sec : sec}`;
 }
+function timing(currentAudio,progress,totalTimeSpan,startTimeSpan){
+   if( currentAudio.readyState>=1){
+    
+        progress.max=Math.floor(currentAudio.duration);
+        totalTimeSpan.textContent = formatTime(currentAudio.duration);
+    }
+  else{ currentAudio.addEventListener("loadedmetadata",()=>{
+    progress.max=Math.floor(currentAudio.duration);
+    totalTimeSpan.textContent = formatTime(currentAudio.duration);
+});
+
+}
+    currentAudio.addEventListener("timeupdate",()=>{
+        progress.value=Math.floor(currentAudio.currentTime);
+        startTimeSpan.textContent = formatTime(currentAudio.currentTime);
+    });
+    progress.addEventListener("input",()=>{
+        currentAudio.currentTime=progress.value;
+    })
+}
+  next.addEventListener("click",()=>{
+    audios[currentplayindex].pause();
+    currentplayindex++;
+    if(currentplayindex>=audios.length) {currentplayindex=0;}
+    const currentAudio=audios[currentplayindex];
+    currentAudio.currentTime=0;
+    currentAudio.play();
+    player.src="./project/pause-button.png";
+    timing(currentAudio,progress,totalTimeSpan,startTimeSpan);
+  }
+);
+prev.addEventListener("click",()=>{
+    audios[currentplayindex].pause();
+    currentplayindex--;
+    if(currentplayindex<0) {currentplayindex=audios.length-1;}
+    const currentAudio=audios[currentplayindex];
+    currentAudio.currentTime=0;
+    currentAudio.play();
+    player.src="./project/pause-button.png";
+    timing(currentAudio,progress,totalTimeSpan,startTimeSpan);
+  }
+);

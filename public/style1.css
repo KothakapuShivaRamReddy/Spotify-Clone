@@ -238,23 +238,25 @@ a{
     
   }
   .progress-bar{
-    appearance: none;
+    
     width: 250px;
     height:5px;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
     border-radius: 1rem;
-    
+   
   }
   .progress-bar::-webkit-slider-runnable-track{
+    
     cursor: pointer;
     height:1rem;
     width:200px;
+    
   }
-  .playback-bar::-webkit-slider-thumb{
-   
-   background: red;
+  .progress-bar::-webkit-slider-thumb{
+   stop-color: red;
   }
+  
   .card-anch{
       cursor: default;
   }
