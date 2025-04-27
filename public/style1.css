@@ -239,22 +239,29 @@ a{
   }
   .progress-bar{
     
-    width: 250px;
-    height:5px;
+    width: 400px;
+    height:4px;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+    appearance: none;
     border-radius: 1rem;
-   
+    background: #ccc;
   }
   .progress-bar::-webkit-slider-runnable-track{
     
     cursor: pointer;
-    height:1rem;
+    height:4px;
     width:200px;
-    
+    background: transparent;
+    border-radius:1rem;
   }
   .progress-bar::-webkit-slider-thumb{
-   stop-color: red;
+   -webkit-appearance: none;
+   background: #1ED760;
+   height: 10px;
+   width: 10px;
+   margin-top:-3px;
+   border-radius: 50%;
   }
   
   .card-anch{
@@ -272,6 +279,7 @@ a{
   }
   .control-item:hover{
     opacity:1;
+    cursor: pointer;
   }
 
   #player{
@@ -287,7 +295,7 @@ a{
      width:50px;
      border-radius: 50%;
      border:none;
-     background-color: red;
+     background-color:red;
      color:black;
      font-size: 20px;
      cursor: pointer;
